@@ -1,0 +1,5 @@
+- protokół został uproszczony do granic. Kazda ramka ma strukture zupełnie inną.
+- brak obsługi pakietów X
+- przy funkcji send nie sprawdza czy wszystkie dane zostały wysłane
+- sposób wysyłania danych w połaczeniu danych jest defecto blokujący i działa tylko dlatego że uzywamy interfejsu 127... trzeba to było zrobic albo za pomocą zestawu WRITE w selekcie albo po select sprawdzać status i wysyłac kolejną partię uzywając gniazda nieblokującego dla danych po stronie serwera.
+- przy odbieraniu danych błąd przerywa petlę ale nie jest to nigdzie rejestrowane i liczenie danych  jest na całym buforze
